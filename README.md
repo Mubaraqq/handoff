@@ -38,4 +38,5 @@ To allow judges to test both sides of the escrow without switching Phantom walle
 `A3ei9dw6ScZ8Wmcw54h7RrtbyexRetGrZv8vxjRtoY9G`
 
 ## Built By
-Mubarak (@Mubaraqq)
+Mubarak Yakubu 
+mubaraqabba@gmail.com
