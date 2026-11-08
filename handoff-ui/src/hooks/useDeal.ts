@@ -34,8 +34,10 @@ export function useDeal(dealAddress?: string | PublicKey | null) {
     for (let i = 0; i < MAX_RETRIES; i++) {
       setAttempts(i + 1);
       try {
-        // Anchor's native fetch handles all the byte decoding perfectly
-        const raw = await program.account.escrowState.fetch(address);
+        // FIX: We cast program.account to 'any' here. 
+        // Vercel's strict TypeScript build doesn't know that 'escrowState' exists 
+        // on the generic program object, even though it does at runtime.
+        const raw = await (program.account as any).escrowState.fetch(address);
         
         // If it succeeds, map the data and stop retrying
         setDeal(mapEscrow(address, raw as any));

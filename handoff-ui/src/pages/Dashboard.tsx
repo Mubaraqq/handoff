@@ -29,7 +29,7 @@ function DealRow({ address, onClick }: { address: string, onClick: () => void })
       try {
         const pubkey = new PublicKey(address);
         // Fetch directly from Anchor, bypassing the complex retry loop
-        const raw = await program.account.escrowState.fetch(pubkey);
+        const raw = await (program.account as any).escrowState.fetch(pubkey);
 
         if (mounted) {
           setDeal(mapEscrow(pubkey, raw));

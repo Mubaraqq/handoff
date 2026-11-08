@@ -17,6 +17,7 @@ import { useHandoffProgram } from '../hooks/useHandoffProgram';
 import { useDemoRole } from '../lib/demo/DemoRoleContext';
 import { getUsdcMint } from '../lib/constants';
 import { Button, Input, Card } from '../components/ui';
+import { Buffer } from 'buffer';
 
 // Read the neutral arbitrator address from the .env file.
 // We use a 3rd party to avoid the "Buyer cannot be Arbitrator" error.
